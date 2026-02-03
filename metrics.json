@@ -1,0 +1,9 @@
+{
+    "accuracy": 0.6666666666666666,
+    "f1_score": 0.6666666666666666,
+    "test_samples": 3,
+    "train_samples": 7,
+    "model_type": "logistic_regression",
+    "random_state": 42,
+    "test_size": 0.3
+}
