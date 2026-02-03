@@ -34,6 +34,22 @@ print(df['Purchased'].value_counts())
 # Check for missing values
 print(f"\n   Missing values:")
 print(df.isnull().sum())
+total_missing = df.isnull().sum().sum()
+
+# Handle missing values if present
+if total_missing > 0:
+    print(f"\n   ⚠ Found {total_missing} missing values. Handling missing data...")
+    print(f"   Strategy: Fill numeric features with column mean")
+    
+    # Fill missing values with column mean for numeric features
+    for col in df.columns:
+        if col != 'Purchased' and df[col].isnull().any():
+            mean_value = df[col].mean()
+            df[col].fillna(mean_value, inplace=True)
+            print(f"      - Filled {col} with mean: {mean_value:.2f}")
+    
+    print(f"\n   ✓ Missing values handled. Checking again...")
+    print(df.isnull().sum())
 
 # ============================================================
 # STEP 2: TRAIN-TEST SPLIT
