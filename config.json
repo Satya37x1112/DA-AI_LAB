@@ -1,0 +1,19 @@
+{
+  "dataset_path": "raw_dataset.csv",
+  "target_column": "Purchased",
+  "test_size": 0.3,
+  "random_state": 42,
+  "model_type": "logistic_regression",
+  "output_model_path": "trained_model.joblib",
+  "output_metrics_path": "metrics.json",
+  "preprocessing": {
+    "missing_value_strategy": "mean",
+    "target_encoding": {
+      "Yes": 1,
+      "No": 0
+    }
+  },
+  "model_parameters": {
+    "max_iter": 1000
+  }
+}
