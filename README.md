@@ -22,7 +22,7 @@
 
 This repository contains **9 complete Python experiments** covering essential data engineering and data analytics concepts. Each experiment is a standalone, fully-functional program with comprehensive documentation, sample datasets, and detailed outputs.
 
-**Total Lines of Code:** ~7,500+  
+**Total Lines of Code:** ~8,200+  
 **Technologies:** Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, SQLite  
 **Difficulty:** Beginner to Intermediate  
 **Purpose:** College lab experiments, self-learning, interview preparation
@@ -61,6 +61,7 @@ pip install pandas numpy scikit-learn matplotlib seaborn requests openpyxl jobli
 | 6 | [ETL Pipeline](#experiment-6-etl-pipeline-to-sqlite) | ETL/Databases | ⭐⭐⭐ | ~3 sec | Extract-Transform-Load |
 | 7 | [Data Wrangling Toolkit](#experiment-7-data-wrangling-toolkit) | Data Preprocessing | ⭐⭐⭐ | ~10 sec | 8 core preprocessing steps |
 | 8 | [Data Enrichment](#experiment-8-data-enrichment-via-mergejoin) | Data Integration | ⭐⭐⭐ | ~5 sec | SQL-like joins in Python |
+| 9 | [Complete EDA Program](#experiment-9-complete-eda-program) | Exploratory Analysis | ⭐⭐⭐ | ~7 sec | End-to-end EDA workflow |
 
 ---
 
@@ -293,6 +294,53 @@ python experiment8_data_enrichment.py
 
 ---
 
+### Experiment 9: Complete EDA Program
+**File:** `experiment9_eda_complete.py`
+
+**What it does:**
+Complete **end-to-end Exploratory Data Analysis** workflow:
+1. **Data Inspection:** Load and examine raw data
+2. **Data Cleaning:** Remove duplicates, handle missing values
+3. **Univariate Analysis:** Analyze individual variables
+4. **Bivariate/Multivariate Analysis:** Relationships between variables
+5. **Outlier Detection:** IQR and Z-score methods
+6. **Feature Engineering:** Standardization, encoding, derived features
+
+**Key Concepts:**
+- Complete EDA workflow
+- Statistical analysis (correlation, distributions)
+- Outlier detection (IQR + Z-score)
+- Feature transformation
+- Data visualization (7 plots)
+- Answer research questions with data
+
+**Research Question:**
+"Does income depend on age?"
+
+**Run:**
+```bash
+python experiment9_eda_complete.py
+```
+
+**Output:**
+- `eda_processed_data.csv` - Final processed dataset (13 records, 11 features)
+- `eda_income_distribution.png` - Histogram + boxplot
+- `eda_age_distribution.png` - Age distribution
+- `eda_age_vs_income_scatter.png` - Scatter plot with trend line
+- `eda_correlation_heatmap.png` - Correlation matrix
+- `eda_income_by_city.png` - City-wise analysis
+- `eda_income_by_gender.png` - Gender-wise analysis
+- `eda_outlier_detection.png` - Outlier visualization
+- `eda_summary.json` - Statistical summary
+- `eda_analysis.log` - Detailed execution logs
+
+**Key Finding:**
+- **Strong positive correlation (0.98)** between age and income
+- Income increases with age
+- 1 outlier detected (60 years, ₹120,000)
+
+---
+
 ## 🚀 Quick Start Guide
 
 ### Step 1: Clone/Download
@@ -315,6 +363,9 @@ python experiment7_data_wrangling_toolkit.py
 
 # Example: Run Data Enrichment
 python experiment8_data_enrichment.py
+
+# Example: Run Complete EDA
+python experiment9_eda_complete.py
 ```
 
 ### Step 4: Check Outputs
@@ -376,32 +427,37 @@ Look for generated files:
 
 ---
 
-## 🎓 Learning Path
+## 🎓 Learning Path9 (Complete EDA)
+   - Learn exploratory data analysis
+   - Understand statistical concepts
+   - Visualize data patterns
 
-### Beginner Track
-1. **Start:** Experiment 6 (ETL Pipeline)
+2. **Next:** Experiment 6 (ETL Pipeline)
    - Learn data extraction, transformation, loading
    - Understand SQL basics
    
-2. **Next:** Experiment 7 (Data Wrangling)
+3. **Then:** Experiment 7 (Data Wrangling)
    - Master data preprocessing
    - Learn feature engineering
    
-3. **Then:** Experiment 8 (Data Enrichment)
-   - Understand joins/merges
-   - Practice data integration
-
-### Intermediate Track
-4. **Continue:** Experiment 1 (Baseline ML)
+5. **Continue:** Experiment 1 (Baseline ML)
+   - Basic machine learning
+   - Train-test split
+   
+6. **Advance:** Experiment 3 (ML Pipeline)
+   - End-to-end ML workflow
+   - Pipeline creation
+   
+7. **Continue:** Experiment 1 (Baseline ML)
    - Basic machine learning
    - Train-test split
    
 5. **Advance:** Experiment 3 (ML Pipeline)
-   - End-to-end ML workflow
-   - Pipeline creation
+8. **Explore:** Experiment 5 (API Collection)
+   - Real-world data sources
+   - API integration
    
-6. **Master:** Experiment 2, 4 (Data Quality)
-   - Advanced data cleaning
+9  - Advanced data cleaning
    - Quality assessment
 
 ### Advanced Track
@@ -409,7 +465,13 @@ Look for generated files:
    - Real-world data sources
    - API integration
    
-8. **Integrate:** Combine multiple experiments
+8. *Exploratory Data Analysis (Exp 9)
+- ✅ Complete EDA workflow
+- ✅ Statistical analysis
+- ✅ Outlier detection methods
+- ✅ Research question answering
+
+### *Integrate:** Combine multiple experiments
    - Build complete data systems
    - Create production pipelines
 
@@ -485,19 +547,21 @@ cd "C:\Users\manoh\OneDrive\Desktop\AI"
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
 - [Scikit-learn User Guide](https://scikit-learn.org/stable/user_guide.html)
 - [Python SQLite Tutorial](https://docs.python.org/3/library/sqlite3.html)
-- [Matplotlib Gallery](https://matplotlib.org/stable/gallery/)
+- [Matplotlib Gallery]8,200+
 
----
+Coverage:
+├── Exploratory Analysis: 11%
+├── ETL/Data Engineering: 33%
+├── Machine Learning: 22%
+├── Data Quality: 22%
+└── API Integration: 11%
 
-## 🎯 Project Statistics
-
-```
-Total Experiments: 9
-Total Python Files: 9
-Total Documentation Files: 6
-Total Dataset Files: 6
-Total Lines of Code: ~7,500+
-
+Output Files Generated:
+├── CSV: 10+
+├── PNG: 10+
+├── DB: 1
+├── JSON: 2+
+└── LOG: 2
 Coverage:
 ├── ETL/Data Engineering: 33%
 ├── Machine Learning: 33%
@@ -544,24 +608,27 @@ Educational project for college lab experiments and self-learning.
 ---
 
 ## 👨‍💻 Author
-
-**Data Engineering & Analytics Lab**  
-Created: January 27, 2026 - February 10, 2026  
-Last Updated: February 10, 2026
-
----
-
-## ⭐ Quick Command Reference
-
-```bash
-# Install all dependencies
-pip install pandas numpy scikit-learn matplotlib seaborn requests openpyxl joblib
+Exploratory Data Analysis
+python experiment9_eda_complete.py
 
 # Run all ETL/Data Engineering experiments
 python experiment6_etl_pipeline.py
 python experiment7_data_wrangling_toolkit.py
 python experiment8_data_enrichment.py
 
+# Run all ML experiments
+python experiment_baseline_complete.py
+python experiment3_ml_pipeline.py
+
+# Run data quality experiments
+python experiment2_label_noise_cleanup.py
+python experiment4_data_quality_scorecard.py
+
+# Run data collection
+python experiment5_api_data_collection.py
+
+# View generated files
+ls *.csv, *.png, *.db, *.log, *.json
 # Run all ML experiments
 python experiment_baseline_complete.py
 python experiment3_ml_pipeline.py
