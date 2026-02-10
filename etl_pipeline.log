@@ -4,3 +4,138 @@
 2026-02-10 15:46:32,788 - INFO - ============================================================
 2026-02-10 15:46:32,788 - INFO - Reading data from students.csv...
 2026-02-10 15:46:32,957 - INFO - Reading data from students.json...
+2026-02-10 15:47:09,125 - INFO - ETL Pipeline started
+2026-02-10 15:47:09,125 - INFO - ============================================================
+2026-02-10 15:47:09,126 - INFO - PHASE 1: EXTRACT - Starting data extraction
+2026-02-10 15:47:09,126 - INFO - ============================================================
+2026-02-10 15:47:09,127 - INFO - Reading data from students.csv...
+2026-02-10 15:47:09,141 - INFO - Reading data from students.json...
+2026-02-10 15:47:09,166 - INFO - 
+============================================================
+2026-02-10 15:47:09,166 - INFO - PHASE 2: TRANSFORM - Starting data transformation
+2026-02-10 15:47:09,167 - INFO - ============================================================
+2026-02-10 15:47:09,216 - INFO - 
+Transformation Summary:
+2026-02-10 15:47:09,217 - INFO -   Final record count: 24
+2026-02-10 15:47:09,217 - INFO -   Columns: ['name', 'age', 'marks', 'city', 'grade']
+2026-02-10 15:47:09,218 - INFO -   Data types: {'name': dtype('O'), 'age': dtype('int64'), 'marks': dtype('float64'), 'city': dtype('O'), 'grade': dtype('O')}
+2026-02-10 15:47:09,229 - INFO - 
+============================================================
+2026-02-10 15:47:09,229 - INFO - PHASE 3: LOAD - Loading data into SQLite database
+2026-02-10 15:47:09,230 - INFO - ============================================================
+2026-02-10 15:47:09,280 - INFO - 
+============================================================
+2026-02-10 15:47:09,280 - INFO - BONUS: Displaying Table Schema
+2026-02-10 15:47:09,281 - INFO - ============================================================
+2026-02-10 15:47:09,285 - INFO - 
+============================================================
+2026-02-10 15:47:09,285 - INFO - EXECUTING SQL QUERIES FOR DATA ANALYSIS
+2026-02-10 15:47:09,286 - INFO - ============================================================
+2026-02-10 15:47:09,332 - INFO - Database connection closed
+2026-02-10 15:47:36,679 - INFO - ETL Pipeline started
+2026-02-10 15:47:36,680 - INFO - ============================================================
+2026-02-10 15:47:36,680 - INFO - PHASE 1: EXTRACT - Starting data extraction
+2026-02-10 15:47:36,681 - INFO - ============================================================
+2026-02-10 15:47:36,681 - INFO - Reading data from students.csv...
+2026-02-10 15:47:36,690 - INFO - ✓ CSV loaded: 15 records
+2026-02-10 15:47:36,691 - INFO - Reading data from students.json...
+2026-02-10 15:47:36,699 - INFO - ✓ JSON loaded: 10 records
+2026-02-10 15:47:36,701 - INFO - ✓ Total records extracted: 25
+2026-02-10 15:47:36,701 - INFO - ✓ Columns found: ['Name', 'Age', 'Marks', 'City']
+2026-02-10 15:47:36,702 - INFO - 
+============================================================
+2026-02-10 15:47:36,703 - INFO - PHASE 2: TRANSFORM - Starting data transformation
+2026-02-10 15:47:36,703 - INFO - ============================================================
+2026-02-10 15:47:36,707 - INFO - ✓ Duplicates removed: 1
+2026-02-10 15:47:36,709 - INFO - ✓ Columns renamed to SQL-friendly format
+2026-02-10 15:47:36,715 - INFO - ✓ Missing values handled: 0 → 0
+2026-02-10 15:47:36,718 - INFO - ✓ Data types converted (age→int, marks→float, text→str)
+2026-02-10 15:47:36,722 - INFO - ✓ Text fields standardized (stripped, proper case)
+2026-02-10 15:47:36,724 - INFO - ✓ Grade column added based on marks
+2026-02-10 15:47:36,726 - INFO - 
+Transformation Summary:
+2026-02-10 15:47:36,726 - INFO -   Final record count: 24
+2026-02-10 15:47:36,726 - INFO -   Columns: ['name', 'age', 'marks', 'city', 'grade']
+2026-02-10 15:47:36,727 - INFO -   Data types: {'name': dtype('O'), 'age': dtype('int64'), 'marks': dtype('float64'), 'city': dtype('O'), 'grade': dtype('O')}
+2026-02-10 15:47:36,736 - INFO - 
+============================================================
+2026-02-10 15:47:36,736 - INFO - PHASE 3: LOAD - Loading data into SQLite database
+2026-02-10 15:47:36,737 - INFO - ============================================================
+2026-02-10 15:47:36,741 - INFO - ✓ Connected to database: etl_lab.db
+2026-02-10 15:47:36,773 - INFO - ✓ Data loaded into table: students
+2026-02-10 15:47:36,774 - INFO - ✓ Records inserted: 24
+2026-02-10 15:47:36,774 - INFO - ✓ Verification: 24 records in database
+2026-02-10 15:47:36,776 - INFO - 
+============================================================
+2026-02-10 15:47:36,776 - INFO - BONUS: Displaying Table Schema
+2026-02-10 15:47:36,777 - INFO - ============================================================
+2026-02-10 15:47:36,779 - INFO - 
+============================================================
+2026-02-10 15:47:36,779 - INFO - EXECUTING SQL QUERIES FOR DATA ANALYSIS
+2026-02-10 15:47:36,780 - INFO - ============================================================
+2026-02-10 15:47:36,787 - INFO - ✓ Query 1 executed: 24 records
+2026-02-10 15:47:36,793 - INFO - ✓ Query 2 executed: 13 students above 75
+2026-02-10 15:47:36,795 - INFO - ✓ Query 3 executed: Average marks = 72.04
+2026-02-10 15:47:36,798 - INFO - ✓ Query 4 executed: Grade distribution calculated
+2026-02-10 15:47:36,804 - INFO - ✓ Query 5 executed: Top 5 scorers displayed
+2026-02-10 15:47:36,806 - INFO - ✓ ETL Pipeline completed successfully
+2026-02-10 15:47:36,807 - INFO - Database connection closed
+2026-02-10 15:47:59,353 - INFO - ETL Pipeline started
+2026-02-10 15:47:59,353 - INFO - ============================================================
+2026-02-10 15:47:59,353 - INFO - PHASE 1: EXTRACT - Starting data extraction
+2026-02-10 15:47:59,354 - INFO - ============================================================
+2026-02-10 15:47:59,354 - INFO - Reading data from students.csv...
+2026-02-10 15:47:59,368 - INFO - ✓ CSV loaded: 15 records
+2026-02-10 15:47:59,368 - INFO - Reading data from students.json...
+2026-02-10 15:47:59,394 - INFO - ✓ JSON loaded: 10 records
+2026-02-10 15:47:59,399 - INFO - ✓ Total records extracted: 25
+2026-02-10 15:47:59,399 - INFO - ✓ Columns found: ['Name', 'Age', 'Marks', 'City']
+2026-02-10 15:47:59,400 - ERROR - ✗ Error during extraction: 'charmap' codec can't encode character '\u2713' in position 0: character maps to <undefined>
+2026-02-10 15:48:50,829 - INFO - ETL Pipeline started
+2026-02-10 15:48:50,829 - INFO - ============================================================
+2026-02-10 15:48:50,830 - INFO - PHASE 1: EXTRACT - Starting data extraction
+2026-02-10 15:48:50,830 - INFO - ============================================================
+2026-02-10 15:48:50,831 - INFO - Reading data from students.csv...
+2026-02-10 15:48:50,845 - INFO - ✓ CSV loaded: 15 records
+2026-02-10 15:48:50,846 - INFO - Reading data from students.json...
+2026-02-10 15:48:50,867 - INFO - ✓ JSON loaded: 10 records
+2026-02-10 15:48:50,870 - INFO - ✓ Total records extracted: 25
+2026-02-10 15:48:50,870 - INFO - ✓ Columns found: ['Name', 'Age', 'Marks', 'City']
+2026-02-10 15:48:50,872 - INFO - 
+============================================================
+2026-02-10 15:48:50,873 - INFO - PHASE 2: TRANSFORM - Starting data transformation
+2026-02-10 15:48:50,873 - INFO - ============================================================
+2026-02-10 15:48:50,883 - INFO - ✓ Duplicates removed: 1
+2026-02-10 15:48:50,885 - INFO - ✓ Columns renamed to SQL-friendly format
+2026-02-10 15:48:50,894 - INFO - ✓ Missing values handled: 0 → 0
+2026-02-10 15:48:50,896 - INFO - ✓ Data types converted (age→int, marks→float, text→str)
+2026-02-10 15:48:50,901 - INFO - ✓ Text fields standardized (stripped, proper case)
+2026-02-10 15:48:50,903 - INFO - ✓ Grade column added based on marks
+2026-02-10 15:48:50,905 - INFO - 
+Transformation Summary:
+2026-02-10 15:48:50,905 - INFO -   Final record count: 24
+2026-02-10 15:48:50,906 - INFO -   Columns: ['name', 'age', 'marks', 'city', 'grade']
+2026-02-10 15:48:50,907 - INFO -   Data types: {'name': dtype('O'), 'age': dtype('int64'), 'marks': dtype('float64'), 'city': dtype('O'), 'grade': dtype('O')}
+2026-02-10 15:48:50,918 - INFO - 
+============================================================
+2026-02-10 15:48:50,918 - INFO - PHASE 3: LOAD - Loading data into SQLite database
+2026-02-10 15:48:50,919 - INFO - ============================================================
+2026-02-10 15:48:50,925 - INFO - ✓ Connected to database: etl_lab.db
+2026-02-10 15:48:50,964 - INFO - ✓ Data loaded into table: students
+2026-02-10 15:48:50,964 - INFO - ✓ Records inserted: 24
+2026-02-10 15:48:50,965 - INFO - ✓ Verification: 24 records in database
+2026-02-10 15:48:50,966 - INFO - 
+============================================================
+2026-02-10 15:48:50,967 - INFO - BONUS: Displaying Table Schema
+2026-02-10 15:48:50,967 - INFO - ============================================================
+2026-02-10 15:48:50,969 - INFO - 
+============================================================
+2026-02-10 15:48:50,969 - INFO - EXECUTING SQL QUERIES FOR DATA ANALYSIS
+2026-02-10 15:48:50,970 - INFO - ============================================================
+2026-02-10 15:48:50,978 - INFO - ✓ Query 1 executed: 24 records
+2026-02-10 15:48:50,984 - INFO - ✓ Query 2 executed: 13 students above 75
+2026-02-10 15:48:50,986 - INFO - ✓ Query 3 executed: Average marks = 72.04
+2026-02-10 15:48:50,990 - INFO - ✓ Query 4 executed: Grade distribution calculated
+2026-02-10 15:48:50,997 - INFO - ✓ Query 5 executed: Top 5 scorers displayed
+2026-02-10 15:48:50,999 - INFO - ✓ ETL Pipeline completed successfully
+2026-02-10 15:48:51,000 - INFO - Database connection closed
