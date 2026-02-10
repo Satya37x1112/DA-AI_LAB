@@ -392,7 +392,7 @@ def detect_outliers(df, column='Salary', visualize=True):
         plt.tight_layout()
         plt.savefig('outlier_detection.png', dpi=300, bbox_inches='tight')
         print("\n✓ Boxplot saved as 'outlier_detection.png'")
-        plt.show()
+        plt.close()  # Close plot to free memory
     
     print("\n" + "=" * 70)
     print("✓ STEP 4 COMPLETED — OUTLIERS REMOVED".center(70))
@@ -695,7 +695,7 @@ def create_correlation_heatmap(df):
     plt.tight_layout()
     plt.savefig('correlation_heatmap.png', dpi=300, bbox_inches='tight')
     print("\n✓ Correlation heatmap saved as 'correlation_heatmap.png'")
-    plt.show()
+    plt.close()  # Close plot to free memory
 
 
 # ============================================================================
