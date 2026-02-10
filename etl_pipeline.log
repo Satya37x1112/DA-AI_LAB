@@ -1,0 +1,6 @@
+2026-02-10 15:46:32,787 - INFO - ETL Pipeline started
+2026-02-10 15:46:32,788 - INFO - ============================================================
+2026-02-10 15:46:32,788 - INFO - PHASE 1: EXTRACT - Starting data extraction
+2026-02-10 15:46:32,788 - INFO - ============================================================
+2026-02-10 15:46:32,788 - INFO - Reading data from students.csv...
+2026-02-10 15:46:32,957 - INFO - Reading data from students.json...

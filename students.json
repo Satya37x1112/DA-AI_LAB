@@ -1,0 +1,62 @@
+[
+    {
+        "Name": "Sanjay Desai",
+        "Age": 22,
+        "Marks": 76.5,
+        "City": "Nagpur"
+    },
+    {
+        "Name": "Kavya Iyer",
+        "Age": 21,
+        "Marks": 87.0,
+        "City": "Coimbatore"
+    },
+    {
+        "Name": "Aditya Chopra",
+        "Age": 20,
+        "Marks": 52.5,
+        "City": "Bhopal"
+    },
+    {
+        "Name": "Simran Kaur",
+        "Age": 23,
+        "Marks": 94.5,
+        "City": "Amritsar"
+    },
+    {
+        "Name": "Rajesh Kumar",
+        "Age": 22,
+        "Marks": 41.0,
+        "City": "Patna"
+    },
+    {
+        "Name": " Meera Pillai ",
+        "Age": 21,
+        "Marks": 83.5,
+        "City": " Trivandrum "
+    },
+    {
+        "Name": "Harsh Agarwal",
+        "Age": 20,
+        "Marks": 69.0,
+        "City": "Kanpur"
+    },
+    {
+        "Name": "",
+        "Age": 22,
+        "Marks": 58.5,
+        "City": "Vadodara"
+    },
+    {
+        "Name": "Tanvi Jain",
+        "Age": 21,
+        "Marks": 90.0,
+        "City": ""
+    },
+    {
+        "Name": "Varun Malhotra",
+        "Age": 23,
+        "Marks": 37.5,
+        "City": "Gurgaon"
+    }
+]
