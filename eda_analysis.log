@@ -1,0 +1,45 @@
+2026-02-10 16:19:31,704 - INFO - Starting EDA with objective: Does income depend on age?
+2026-02-10 16:19:31,705 - INFO - Loading data...
+2026-02-10 16:19:31,709 - INFO - Using sample dataset (15 records)
+2026-02-10 16:19:31,711 - INFO - Dataset shape: (15, 4)
+2026-02-10 16:19:31,762 - INFO - Missing values: {'age': 1, 'income': 1, 'city': 0, 'gender': 0}
+2026-02-10 16:19:31,786 - INFO - Starting data cleaning...
+2026-02-10 16:19:31,793 - INFO - Duplicates removed: 0
+2026-02-10 16:19:31,794 - INFO - Converted 'age' to numeric
+2026-02-10 16:19:31,795 - INFO - Converted 'income' to numeric
+2026-02-10 16:19:31,800 - INFO - Dataset after cleaning: (13, 4)
+2026-02-10 16:19:31,805 - INFO - Performing univariate analysis...
+2026-02-10 16:19:31,812 - INFO - City distribution: {'Delhi': 4, 'Mumbai': 3, 'Pune': 2, 'Kolkata': 2, 'Bangalore': 2}
+2026-02-10 16:19:31,814 - INFO - Gender distribution: {'M': 7, 'F': 6}
+2026-02-10 16:19:33,326 - INFO - Saved: eda_income_distribution.png
+2026-02-10 16:19:34,576 - INFO - Saved: eda_age_distribution.png
+2026-02-10 16:19:34,578 - INFO - Performing bivariate/multivariate analysis...
+2026-02-10 16:19:35,569 - INFO - Saved: eda_age_vs_income_scatter.png
+2026-02-10 16:19:35,579 - INFO - Correlation (age vs income): 0.9752
+2026-02-10 16:19:36,235 - INFO - Saved: eda_correlation_heatmap.png
+2026-02-10 16:19:36,275 - INFO - City-wise income stats:
+           count          mean   median      min       max
+city                                                      
+Bangalore      2  67500.000000  67500.0  60000.0   75000.0
+Mumbai         3  60666.666667  32000.0  30000.0  120000.0
+Kolkata        2  39000.000000  39000.0  26000.0   52000.0
+Delhi          4  32000.000000  31000.0  18000.0   48000.0
+Pune           2  31500.000000  31500.0  28000.0   35000.0
+2026-02-10 16:19:37,144 - INFO - Saved: eda_income_by_city.png
+2026-02-10 16:19:37,166 - INFO - Gender-wise income stats:
+        count          mean   median      min       max
+gender                                                 
+M           7  52857.142857  40000.0  18000.0  120000.0
+F           6  36000.000000  31000.0  26000.0   52000.0
+2026-02-10 16:19:38,083 - INFO - Saved: eda_income_by_gender.png
+2026-02-10 16:19:38,085 - INFO - Performing outlier detection...
+2026-02-10 16:19:38,089 - INFO - IQR outliers: 1
+2026-02-10 16:19:38,102 - INFO - Z-score outliers: 0
+2026-02-10 16:19:39,238 - INFO - Saved: eda_outlier_detection.png
+2026-02-10 16:19:39,240 - INFO - Performing feature engineering...
+2026-02-10 16:19:39,243 - INFO - Created standardized features
+2026-02-10 16:19:39,248 - INFO - One-hot encoded columns: ['city', 'gender']
+2026-02-10 16:19:39,250 - INFO - Created derived feature: income_per_age
+2026-02-10 16:19:39,285 - INFO - Saved processed dataset: eda_processed_data.csv
+2026-02-10 16:19:39,291 - INFO - EDA analysis completed successfully
+2026-02-10 16:19:39,294 - INFO - Saved summary JSON file

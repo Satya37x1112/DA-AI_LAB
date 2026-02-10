@@ -1,0 +1,21 @@
+{
+    "objective": "Does income depend on age?",
+    "timestamp": "2026-02-10 16:19:39",
+    "dataset": {
+        "original_records": 15,
+        "duplicates_removed": 0,
+        "final_records": 13,
+        "total_features": 11
+    },
+    "statistics": {
+        "age_mean": 35.69230769230769,
+        "age_median": 33.0,
+        "income_mean": 45076.92307692308,
+        "income_median": 35000.0,
+        "correlation_age_income": 0.9751553144030444
+    },
+    "outliers": {
+        "iqr_method": 1,
+        "zscore_method": 0
+    }
+}
